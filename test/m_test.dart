@@ -1,4 +1,4 @@
-import 'package:m/monster_base.dart';
+import 'package:m/monster/monster_base.dart';
 import 'package:test/test.dart';
 
 void main() {
