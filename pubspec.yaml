@@ -1,5 +1,5 @@
-name: m
-description: A sample command-line application.
+name: octo
+description: yes, this is a description.
 version: 1.0.0
 # homepage: https://www.example.com
 
@@ -13,3 +13,6 @@ environment:
 dev_dependencies:
   lints: ^1.0.0
   test: ^1.16.0
+
+dependencies: 
+  args: ^2.3.0
