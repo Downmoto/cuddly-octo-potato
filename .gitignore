@@ -10,3 +10,6 @@ python/
 
 # mac finder ignore
 .DS_STORE
+
+# possible temp ignore
+data/
