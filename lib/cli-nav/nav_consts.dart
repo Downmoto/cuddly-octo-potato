@@ -16,3 +16,4 @@ const int topRight = 0x2557;
 const int botRight = 0x255D;
 const int vert = 0x2550;
 const int hori = 0x2551;
+const int whitespace = 0x0020;
