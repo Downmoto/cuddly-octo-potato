@@ -6,6 +6,8 @@ final _logo = logo;
 final _author = author;
 
 final _cols = 35; // terminal columns entry will occupy
+int _mid = (_cols ~/ 2) + 1;
+
 
 // creates lines in terminal splash screen
 void _createLines(line) {
@@ -30,10 +32,9 @@ void _createTopBorder() {
 // creates middle section (logo and author) of splash screen
 void _createMiddleBorder() {
   final splitLogo = _logo.split("\n");
-  int mid = (_cols ~/ 2) + 1;
 
-  String a = _author.padLeft(mid + (_author.length ~/ 2), ' ');
-  a = a.padRight((mid * 2) - 1, ' ');
+  String a = _author.padLeft(_mid + (_author.length ~/ 2), ' ');
+  a = a.padRight((_mid * 2) - 1, ' ');
 
   for (int i = 0; i < splitLogo.length - 1; i++) {
     stdout.write(String.fromCharCode(hori));
@@ -57,9 +58,18 @@ void _createBotBorder() {
   stdout.writeln(String.fromCharCode(botRight));
 }
 
+// creates 
+void _createStartOption() {
+  _createLines(whitespace);
+  stdout.write('\n');
+  stdout.writeln('.start'.padLeft(_mid + 3, ' '));
+  stdout.write('\n');
+}
+
 // generates splash screen
 void splashScreen() {
   _createTopBorder();
   _createMiddleBorder();
   _createBotBorder();
+  _createStartOption();
 }
